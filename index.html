@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex, nofollow">
+<title>Campaña Las Vegas</title>
+<link rel="icon" href="favicon.svg" type="image/svg+xml"><link rel="icon" href="favicon.ico" sizes="any"><link rel="apple-touch-icon" href="apple-touch-icon.png">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&family=Inter:wght@400;500;600&display=swap">
+<style>
+  :root { --paper:#FAF9F7; --card:#FFFFFF; --card-2:#F2F0EC; --line:#DEDAD3; --line-soft:#EAE7E1; --ink:#1A1C1E; --ink-2:#4E4B46; --ink-3:#7C7871; --gold:#8A6D16; --gold-bg:#F6F1DF; --ok:#2E6B41; --ok-bg:#E6F0E9; --warn:#8A4B16; --warn-bg:#F7EADF;
+    --mono:"IBM Plex Mono",ui-monospace,Menlo,monospace; --display:"Oswald","Arial Narrow",sans-serif; --body:"Inter",system-ui,-apple-system,sans-serif; }
+  @media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) { color-scheme:dark; --paper:#121416; --card:#1B1E22; --card-2:#23272B; --line:#31363B; --line-soft:#262A2E; --ink:#EAE8E4; --ink-2:#B5B1AB; --ink-3:#8B8781; --gold:#CBAB4E; --gold-bg:#2A2517; --ok:#72C189; --ok-bg:#17291D; --warn:#D9955A; --warn-bg:#2C2017; } }
+  :root[data-theme="dark"] { color-scheme:dark; --paper:#121416; --card:#1B1E22; --card-2:#23272B; --line:#31363B; --line-soft:#262A2E; --ink:#EAE8E4; --ink-2:#B5B1AB; --ink-3:#8B8781; --gold:#CBAB4E; --gold-bg:#2A2517; --ok:#72C189; --ok-bg:#17291D; --warn:#D9955A; --warn-bg:#2C2017; }
+  * { box-sizing:border-box; }
+  body { background:var(--paper); color:var(--ink); font-family:var(--body); font-size:15px; line-height:1.65; margin:0; }
+  .wrap { max-width:800px; margin:0 auto; padding:0 22px; padding-block:40px 80px; }
+  .cover { border-bottom:3px solid var(--ink); padding-bottom:26px; }
+  .kicker { font-family:var(--mono); font-size:11px; letter-spacing:.15em; text-transform:uppercase; color:var(--gold); margin:0 0 14px; }
+  h1 { font-family:var(--display); font-weight:600; font-size:clamp(32px,7vw,52px); line-height:1.02; text-transform:uppercase; margin:0; text-wrap:balance; }
+  .standfirst { font-size:17px; line-height:1.6; color:var(--ink-2); margin:18px 0 0; max-width:60ch; }
+  .meta { font-family:var(--mono); font-size:11.5px; color:var(--ink-3); margin:22px 0 0; letter-spacing:.02em; }
+  .summary { background:var(--card); border:1px solid var(--line); padding:26px 28px; margin-top:34px; }
+  .summary h2 { border:none; padding:0; margin:0 0 16px; }
+  .sum-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(128px,1fr)); gap:20px 24px; margin:0; }
+  .sum-grid dt { font-family:var(--mono); font-size:10px; letter-spacing:.09em; text-transform:uppercase; color:var(--ink-3); margin:0 0 3px; }
+  .sum-grid dd { font-family:var(--mono); font-size:20px; font-weight:500; font-variant-numeric:tabular-nums; margin:0; line-height:1.2; }
+  .sum-grid dd small { display:block; font-family:var(--body); font-size:12px; font-weight:400; color:var(--ink-3); margin-top:2px; }
+  section { margin-top:52px; }
+  h2 { font-family:var(--display); font-weight:500; font-size:12px; letter-spacing:.2em; text-transform:uppercase; color:var(--ink-3); margin:0 0 20px; padding-bottom:9px; border-bottom:1px solid var(--line); }
+  h3 { font-family:var(--display); font-weight:500; font-size:23px; text-transform:uppercase; margin:32px 0 8px; text-wrap:balance; }
+  h3:first-of-type { margin-top:0; }
+  p { margin:0 0 16px; max-width:68ch; }
+  p:last-child { margin-bottom:0; }
+  strong { font-weight:600; }
+  em { font-style:italic; color:var(--ink-2); }
+  .scroll { overflow-x:auto; margin:22px 0; }
+  table { width:100%; border-collapse:collapse; font-size:14px; min-width:480px; }
+  th { font-family:var(--mono); font-size:10px; letter-spacing:.09em; text-transform:uppercase; color:var(--ink-3); text-align:left; font-weight:500; padding:0 14px 9px 0; border-bottom:1px solid var(--line); }
+  td { padding:13px 14px 13px 0; border-bottom:1px solid var(--line-soft); vertical-align:top; }
+  tbody tr:last-child td { border-bottom:none; }
+  tfoot td { border-top:2px solid var(--line); border-bottom:none; padding-top:13px; font-weight:600; }
+  .num { font-family:var(--mono); font-variant-numeric:tabular-nums; white-space:nowrap; }
+  .sub { color:var(--ink-3); font-size:12.5px; display:block; margin-top:3px; }
+  .callout { background:var(--gold-bg); border-left:3px solid var(--gold); padding:20px 24px; margin:26px 0; }
+  .callout h4 { font-family:var(--display); font-weight:500; font-size:17px; text-transform:uppercase; color:var(--gold); margin:0 0 8px; }
+  .callout p { color:var(--ink-2); max-width:none; }
+  .warn { background:var(--warn-bg); border-left:3px solid var(--warn); }
+  .warn h4 { color:var(--warn); }
+  .quiet { background:var(--card-2); border:1px solid var(--line-soft); padding:20px 24px; margin:26px 0; }
+  .quiet p { color:var(--ink-2); max-width:none; }
+  .facts { list-style:none; padding:0; margin:22px 0; display:grid; gap:14px; }
+  .facts li { display:grid; grid-template-columns:auto 1fr; gap:16px; align-items:start; }
+  .facts .mark { font-family:var(--mono); font-size:11px; color:var(--gold); border:1px solid var(--line); border-radius:50%; width:26px; height:26px; display:grid; place-items:center; margin-top:1px; }
+  .facts p { margin:0; max-width:none; }
+  .facts .why { color:var(--ink-2); font-size:13.5px; margin-top:4px; }
+  .ads { display:grid; gap:1px; background:var(--line); border:1px solid var(--line); margin:22px 0; }
+  .ad { background:var(--card); padding:16px 20px; }
+  .ad-top { display:flex; gap:12px; align-items:baseline; flex-wrap:wrap; }
+  .ad-kind { font-family:var(--mono); font-size:10px; letter-spacing:.08em; text-transform:uppercase; color:var(--ink-3); border:1px solid var(--line); padding:2px 7px; }
+  .ad-name { font-family:var(--display); font-size:18px; text-transform:uppercase; }
+  .ad p { margin:6px 0 0; color:var(--ink-2); font-size:13.5px; max-width:none; }
+  .phases { display:grid; margin:22px 0; }
+  .phase { display:grid; grid-template-columns:110px 1fr; gap:20px; padding:18px 0; border-bottom:1px solid var(--line-soft); }
+  .phase:last-child { border-bottom:none; }
+  .phase-when { font-family:var(--mono); font-size:12px; color:var(--gold); padding-top:2px; }
+  .phase h4 { font-family:var(--body); font-size:15px; font-weight:600; margin:0 0 4px; }
+  .phase p { margin:0; color:var(--ink-2); font-size:13.5px; max-width:none; }
+  .doors { display:grid; grid-template-columns:repeat(auto-fit,minmax(260px,1fr)); gap:16px; margin:22px 0; }
+  .door { background:var(--card); border:1px solid var(--line); padding:20px 22px; }
+  .door h4 { font-family:var(--display); font-size:20px; text-transform:uppercase; margin:0 0 6px; }
+  .door .tag { font-family:var(--mono); font-size:10px; letter-spacing:.09em; text-transform:uppercase; color:var(--gold); }
+  .door p { font-size:13.5px; color:var(--ink-2); max-width:none; margin:8px 0 0; }
+  .fine { font-size:12.5px; color:var(--ink-3); }
+  footer { margin-top:60px; padding-top:20px; border-top:1px solid var(--line); color:var(--ink-3); font-size:12.5px; }
+  .langbar { position:sticky; top:env(safe-area-inset-top,0px); z-index:20; display:flex; justify-content:flex-end; padding:10px 0 12px; background:linear-gradient(var(--paper) 72%,transparent); }
+  .langtoggle { display:inline-flex; border:1px solid var(--line); background:var(--card); padding:2px; }
+  .langtoggle button { font-family:var(--mono); font-size:11px; letter-spacing:.08em; text-transform:uppercase; color:var(--ink-3); background:none; border:none; padding:6px 13px; cursor:pointer; }
+  .langtoggle button[aria-pressed="true"] { background:var(--ink); color:var(--paper); }
+  :root[data-lang="en"] [lang="es"] { display:none; }
+  :root:not([data-lang="en"]) [lang="en"] { display:none; }
+  @media (max-width:540px) { .phase { grid-template-columns:1fr; gap:6px; } .sum-grid { grid-template-columns:1fr 1fr; } }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="langbar"><div class="langtoggle" role="group" aria-label="Idioma / Language"><button type="button" id="btn-es" aria-pressed="true">Español</button><button type="button" id="btn-en" aria-pressed="false">English</button></div></div>
+
+  <header class="cover">
+    <p class="kicker"><span lang="es">Juventus Academy Las Vegas · Propuesta de inversión publicitaria</span><span lang="en">Juventus Academy Las Vegas · Advertising investment proposal</span></p>
+    <h1 lang="es">Campaña de captación<br>Las Vegas</h1>
+    <h1 lang="en">Las Vegas<br>Enrollment Campaign</h1>
+    <p class="standfirst" lang="es">Qué se hizo antes en publicidad, qué se aprendió del contexto de Las Vegas, cómo se va a invertir el presupuesto mensual, qué se espera obtener y cómo se va a medir el antes y el después.</p>
+    <p class="standfirst" lang="en">What was done before in advertising, what the Las Vegas context taught, how the monthly budget will be invested, what to expect, and how the before and after will be measured.</p>
+    <p class="meta"><span lang="es">Octubre 2026 · Meta Ads (Facebook + Instagram) · Destino: mensajes (WhatsApp)</span><span lang="en">October 2026 · Meta Ads (Facebook + Instagram) · Destination: messages (WhatsApp)</span></p>
+  </header>
+
+  <div class="summary">
+    <h2><span lang="es">En resumen</span><span lang="en">At a glance</span></h2>
+    <dl class="sum-grid">
+      <div><dt><span lang="es">Inversión</span><span lang="en">Investment</span></dt><dd><span lang="es">$990</span><span lang="en">$990</span><small><span lang="es">al mes</span><span lang="en">per month</span></small></dd></div>
+      <div><dt><span lang="es">Diario</span><span lang="en">Daily</span></dt><dd><span lang="es">$33</span><span lang="en">$33</span><small>3 × <span lang="es">$11</span><span lang="en">$11</span></small></dd></div>
+      <div><dt><span lang="es">Antes</span><span lang="en">Before</span></dt><dd><span lang="es">$9,35</span><span lang="en">$9.35</span><small><span lang="es">por conversación (promociones)</span><span lang="en">per conversation (boosts)</span></small></dd></div>
+      <div><dt><span lang="es">Objetivo</span><span lang="en">Target</span></dt><dd><span lang="es">$4</span><span lang="en">$4</span><small><span lang="es">por conversación</span><span lang="en">per conversation</span></small></dd></div>
+      <div><dt><span lang="es">Esperado</span><span lang="en">Expected</span></dt><dd>~250<small><span lang="es">conversaciones/mes</span><span lang="en">conversations/month</span></small></dd></div>
+      <div><dt><span lang="es">Anuncios</span><span lang="en">Ads</span></dt><dd>6<small><span lang="es">en 3 públicos</span><span lang="en">across 3 audiences</span></small></dd></div>
+    </dl>
+  </div>
+
+  <!-- ===== 00 PANORAMA ===== -->
+  <section>
+    <h2><span lang="es">00 · Lo que se hizo antes</span><span lang="en">00 · What was done before</span></h2>
+    <h3><span lang="es">Toda la publicidad de Las Vegas salió del botón "Promocionar" de Instagram</span><span lang="en">All Las Vegas advertising came from the Instagram "Boost" button</span></h3>
+    <p lang="es">Entre octubre de 2025 y agosto de 2026 se invirtieron <strong>$3.157,76</strong> en 21 promociones hechas desde la app de Instagram, sin cuenta publicitaria dedicada, sin píxel y sin estructura de públicos. Cada promoción tuvo un objetivo distinto, así que el historial se lee en tres bloques:</p>
+    <p lang="en">Between October 2025 and August 2026, <strong>$3,157.76</strong> was spent on 21 boosts made from the Instagram app, with no dedicated ad account, no pixel and no audience structure. Each boost had a different goal, so the history reads in three blocks:</p>
+    <div class="scroll"><table>
+      <thead><tr><th><span lang="es">Objetivo de la promoción</span><span lang="en">Boost goal</span></th><th class="num"><span lang="es">Promociones</span><span lang="en">Boosts</span></th><th class="num"><span lang="es">Inversión</span><span lang="en">Spend</span></th><th class="num"><span lang="es">Resultado</span><span lang="en">Result</span></th><th class="num"><span lang="es">Costo</span><span lang="en">Cost</span></th></tr></thead>
+      <tbody>
+        <tr><td><strong><span lang="es">Mensajes</span><span lang="en">Messages</span></strong><span class="sub"><span lang="es">oct-2025 → feb-2026</span><span lang="en">Oct 2025 → Feb 2026</span></span></td><td class="num">3</td><td class="num"><span lang="es">$991,31</span><span lang="en">$991.31</span></td><td class="num">106 <span lang="es">conversaciones</span><span lang="en">conversations</span></td><td class="num"><strong><span lang="es">$9,35</span><span lang="en">$9.35</span></strong></td></tr>
+        <tr><td><strong><span lang="es">Clics en el enlace</span><span lang="en">Link clicks</span></strong><span class="sub"><span lang="es">tryouts, abr → ago-2026</span><span lang="en">tryouts, Apr → Aug 2026</span></span></td><td class="num">15</td><td class="num"><span lang="es">$1.763,87</span><span lang="en">$1,763.87</span></td><td class="num"><span lang="es">5.384</span><span lang="en">5,384</span> <span lang="es">clics</span><span lang="en">clicks</span></td><td class="num"><span lang="es">$0,33</span><span lang="en">$0.33</span></td></tr>
+        <tr><td><strong><span lang="es">Visitas al perfil</span><span lang="en">Profile visits</span></strong><span class="sub"><span lang="es">abr-2026</span><span lang="en">Apr 2026</span></span></td><td class="num">3</td><td class="num"><span lang="es">$402,58</span><span lang="en">$402.58</span></td><td class="num"><span lang="es">1.613</span><span lang="en">1,613</span> <span lang="es">visitas</span><span lang="en">visits</span></td><td class="num"><span lang="es">$0,25</span><span lang="en">$0.25</span></td></tr>
+      </tbody>
+      <tfoot><tr><td colspan="2">Total</td><td class="num"><span lang="es">$3.157,76</span><span lang="en">$3,157.76</span></td><td colspan="2"></td></tr></tfoot>
+    </table></div>
+    <ul class="facts">
+      <li><span class="mark">1</span><div><p><span lang="es"><strong>El público de Las Vegas responde bien a mensajes.</strong></span><span lang="en"><strong>The Las Vegas audience responds well to messages.</strong></span></p><p class="why"><span lang="es">Las dos últimas promociones de mensajes costaron $8,09 y $8,44 por conversación, menos que Pre-Academy Miami en su historial ($11,03). Es la referencia de partida de esta campaña.</span><span lang="en">The last two message boosts cost $8.09 and $8.44 per conversation, below Pre-Academy Miami's historical figure ($11.03). That is this campaign's starting reference.</span></p></div></li>
+      <li><span class="mark">2</span><div><p><span lang="es"><strong>El 56 % del dinero no tiene resultado medible.</strong></span><span lang="en"><strong>56% of the money has no measurable result.</strong></span></p><p class="why"><span lang="es">Las promociones de clics fueron baratas, pero sin píxel ni formulario no hay forma de saber cuántos de esos 5.384 clics terminaron en una inscripción.</span><span lang="en">The click boosts were cheap, but with no pixel or form there is no way to know how many of those 5,384 clicks ended in an enrollment.</span></p></div></li>
+      <li><span class="mark">3</span><div><p><span lang="es"><strong>Se invirtió a ráfagas, no de forma continua.</strong></span><span lang="en"><strong>Spending came in bursts, not continuously.</strong></span></p><p class="why"><span lang="es">Abril y mayo (tryouts) concentraron unos $1.800; agosto unos $420; junio, julio y septiembre casi nada. Para un programa que inscribe todo el año, la captación se apagaba justo cuando el padre decide.</span><span lang="en">April and May (tryouts) concentrated about $1,800; August about $420; June, July and September almost nothing. For a program that enrolls year-round, acquisition switched off exactly when parents decide.</span></p></div></li>
+      <li><span class="mark">4</span><div><p><span lang="es"><strong>Lo que mejor enganchó: la ciudad y la oportunidad.</strong></span><span lang="en"><strong>What hooked best: the city and the opportunity.</strong></span></p><p class="why"><span lang="es">"Juventus tryouts in Las Vegas" y "Las Vegas, your opportunity is here" tuvieron las mejores tasas de clic (3,1 % y 3,4 %) a $0,20 por clic. Las piezas genéricas de academia, la mitad.</span><span lang="en">"Juventus tryouts in Las Vegas" and "Las Vegas, your opportunity is here" had the best click rates (3.1% and 3.4%) at $0.20 per click. Generic academy pieces, half that.</span></p></div></li>
+    </ul>
+  </section>
+
+  <!-- ===== 01 CONTEXTO ===== -->
+  <section>
+    <h2><span lang="es">01 · Lo que se aprendió del contexto</span><span lang="en">01 · What the context taught</span></h2>
+    <p lang="es">Antes de definir la campaña se revisaron la página web, los 386 posts de Instagram de los últimos 16 meses con sus métricas, el análisis de copys, la competencia local, el banco de 109 fotos y 262 videos, y lo dicho por dirección en las reuniones de septiembre y octubre. Esto es lo que cambia la campaña:</p>
+    <p lang="en">Before defining the campaign, the website, the 386 Instagram posts of the last 16 months with their metrics, the copy analysis, local competitors, the bank of 109 photos and 262 videos, and management's guidance in the September and October meetings were reviewed. This is what shapes the campaign:</p>
+
+    <h3><span lang="es">Las Vegas no es Miami: es más competitiva</span><span lang="en">Las Vegas is not Miami: it is more competitive</span></h3>
+    <p lang="es">Dirección lo definió así: Juventus Academy Las Vegas es "como la Pre-Academy de Miami, pero más competitiva". Los equipos compiten en liga y torneos, y un equipo de la academia ya se midió con rivales de MLS Next. El mensaje de Miami (el niño que nunca ha estado en un equipo) solo sirve para una parte del público. La otra parte ya juega y quiere más.</p>
+    <p lang="en">Management put it this way: Juventus Academy Las Vegas is "like Miami's Pre-Academy, but more competitive". Teams compete in leagues and tournaments, and one academy team has already faced MLS Next opponents. Miami's message (the child who has never been on a team) only works for part of the audience. The other part already plays and wants more.</p>
+
+    <h3><span lang="es">Quién sigue la cuenta y qué le interesa</span><span lang="en">Who follows the account and what they care about</span></h3>
+    <ul class="facts">
+      <li><span class="mark">a</span><div><p><span lang="es"><strong>Padres de 35 a 44 años, 62 % hombres, en Las Vegas, North Las Vegas, Sunrise Manor, Spring Valley, Enterprise y Henderson.</strong></span><span lang="en"><strong>Parents aged 35 to 44, 62% men, in Las Vegas, North Las Vegas, Sunrise Manor, Spring Valley, Enterprise and Henderson.</strong></span></p><p class="why"><span lang="es">2.415 seguidores y 536.000 cuentas alcanzadas en 16 meses: hay con qué construir un público similar.</span><span lang="en">2,415 followers and 536,000 accounts reached in 16 months: enough to build a lookalike audience.</span></p></div></li>
+      <li><span class="mark">b</span><div><p><span lang="es"><strong>Lo que más rinde: tryouts con fecha, coaches y los equipos propios.</strong></span><span lang="en"><strong>What performs best: dated tryouts, coaches and the academy's own teams.</strong></span></p><p class="why"><span lang="es">El post más visto de la cuenta es un anuncio de tryouts (17.774 vistas, 184 compartidos). Los posts sobre coaches rinden un 15 % más que su formato; los que hablan del primer equipo de Juventus, un 20 % menos. El público responde a su ciudad y a su equipo.</span><span lang="en">The most-viewed post is a tryout announcement (17,774 views, 184 shares). Posts about coaches perform 15% above their format; posts about Juventus' first team, 20% below. The audience responds to its city and its team.</span></p></div></li>
+      <li><span class="mark">c</span><div><p><span lang="es"><strong>Hablarle a la familia duplica los compartidos; pedir un mensaje directo sube las vistas.</strong></span><span lang="en"><strong>Speaking to the family doubles shares; asking for a direct message lifts views.</strong></span></p><p class="why"><span lang="es">Por eso los seis anuncios cierran con "send us a message" y dos de ellos muestran padres y niños.</span><span lang="en">That is why all six ads close with "send us a message" and two of them show parents and kids.</span></p></div></li>
+      <li><span class="mark">d</span><div><p><span lang="es"><strong>La imagen y el carrusel superan al video en interacción, aunque el 86 % de lo publicado era video.</strong></span><span lang="en"><strong>Images and carousels beat video on engagement, even though 86% of what was posted was video.</strong></span></p><p class="why"><span lang="es">La campaña lleva dos videos y cuatro imágenes, y deja que los datos digan cuál gana.</span><span lang="en">The campaign runs two videos and four images and lets the data decide which wins.</span></p></div></li>
+    </ul>
+
+    <h3><span lang="es">La competencia y lo que solo tiene Juventus</span><span lang="en">The competition and what only Juventus has</span></h3>
+    <p lang="es">Albion SC Las Vegas, Downtown Las Vegas SC y Las Vegas Sports Academy son clubes más grandes, con equipos en MLS Next y Girls Academy. Competir por tamaño no tiene sentido. Lo que ningún competidor puede decir: metodología oficial de Juventus FC adaptada por edad, coaches certificados (uno con licencia U.S. Soccer National B, otro llegado de Italia), diez equipos con nombre de leyenda, un jugador de la academia invitado a entrenar en Italia, más de 400 jugadores en los últimos tryouts y un "Juventus Academy Day" proclamado por la ciudad de Las Vegas. Los anuncios se apoyan en eso, aterrizado en lo local.</p>
+    <p lang="en">Albion SC Las Vegas, Downtown Las Vegas SC and Las Vegas Sports Academy are bigger clubs with MLS Next and Girls Academy teams. Competing on size makes no sense. What no competitor can say: official Juventus FC methodology adapted by age, certified coaches (one with a U.S. Soccer National B license, another who came from Italy), ten teams named after legends, an academy player invited to train in Italy, more than 400 players at the latest tryouts and a "Juventus Academy Day" proclaimed by the City of Las Vegas. The ads lean on that, grounded locally.</p>
+
+    <div class="callout warn">
+      <h4><span lang="es">Un riesgo propio de Las Vegas: los turistas</span><span lang="en">A risk unique to Las Vegas: tourists</span></h4>
+      <p lang="es">Las Vegas recibe unos 40 millones de visitantes al año. Si la campaña se muestra a "personas que estuvieron recientemente en la ubicación", como Meta sugiere por defecto, una parte del presupuesto se va a familias que están de paso. Los tres públicos se limitan a <strong>residentes</strong>.</p>
+      <p lang="en">Las Vegas receives about 40 million visitors a year. If the campaign is shown to "people recently in this location", as Meta suggests by default, part of the budget goes to families passing through. All three audiences are limited to <strong>residents</strong>.</p>
+    </div>
+  </section>
+
+  <!-- ===== 02 OBJETIVO ===== -->
+  <section>
+    <h2><span lang="es">02 · El objetivo</span><span lang="en">02 · The objective</span></h2>
+    <h3><span lang="es">Conversaciones con padres de Las Vegas</span><span lang="en">Conversations with Las Vegas parents</span></h3>
+    <p lang="es">La campaña busca una sola cosa: que un padre o una madre del área de Las Vegas abra una conversación preguntando por un equipo para su hijo o hija. No busca seguidores, clics ni visitas al perfil, que es lo que se compró antes y no se pudo medir.</p>
+    <p lang="en">The campaign is after one thing: a parent in the Las Vegas area opening a conversation to ask about a team for their child. Not followers, clicks or profile visits, which is what was bought before and could not be measured.</p>
+    <p lang="es">La razón es la misma que en Miami y ya está comprobada allí: la inscripción en una academia es una decisión familiar que se conversa, y el canal donde esa conversación ocurre y el equipo puede responder es la mensajería. Optimizar a cualquier otro indicador produce cifras más vistosas y menos inscripciones.</p>
+    <p lang="en">The reason is the same as in Miami and has already been proven there: enrolling in an academy is a family decision that gets talked through, and the channel where that conversation happens and the team can respond is messaging. Optimizing toward any other metric produces better-looking numbers and fewer enrollments.</p>
+    <div class="callout">
+      <h4><span lang="es">Pendiente de definir: el número de WhatsApp</span><span lang="en">To be defined: the WhatsApp number</span></h4>
+      <p lang="es">En Miami las conversaciones llegan a WhatsApp. Para Las Vegas dirección está definiendo con el director qué número recibe los mensajes. Si no hay un número dedicado al lanzar, las conversaciones llegan a Instagram Direct, que es donde llegaron las 106 conversaciones anteriores. La estructura es la misma; solo cambia el destino.</p>
+      <p lang="en">In Miami, conversations arrive on WhatsApp. For Las Vegas, management is defining with the director which number receives the messages. If there is no dedicated number at launch, conversations arrive on Instagram Direct, which is where the previous 106 conversations arrived. The structure is the same; only the destination changes.</p>
+    </div>
+  </section>
+
+  <!-- ===== 03 DOS PUERTAS ===== -->
+  <section>
+    <h2><span lang="es">03 · Dos puertas, una conversación</span><span lang="en">03 · Two doors, one conversation</span></h2>
+    <p lang="es">La academia tiene dos programas abiertos, y la campaña habla a los dos sin dividir el presupuesto. La conversación es la que separa: la primera pregunta del equipo es la edad del niño.</p>
+    <p lang="en">The academy has two open programs, and the campaign speaks to both without splitting the budget. The conversation does the sorting: the team's first question is the child's age.</p>
+    <div class="doors">
+      <div class="door"><span class="tag"><span lang="es">Puerta 1 · 3 a 5 años</span><span lang="en">Door 1 · ages 3 to 5</span></span><h4>Little Zebras</h4><p><span lang="es">Programa de 9 meses, sin tryout, inscripción constante (arrancó el 24 de septiembre). Mismos coaches que los equipos competitivos. Es el equivalente de la Pre-Academy de Miami y el que más inscripciones inmediatas puede generar.</span><span lang="en">9-month program, no tryout, continuous enrollment (started September 24). Same coaches as the competitive teams. It is the equivalent of Miami's Pre-Academy and the one that can generate the most immediate enrollments.</span></p></div>
+      <div class="door"><span class="tag"><span lang="es">Puerta 2 · 5 a 18 años</span><span lang="en">Door 2 · ages 5 to 18</span></span><h4><span lang="es">Competitivo</span><span lang="en">Competitive</span></h4><p><span lang="es">Equipos que juegan liga y torneos. Se entra por tryout (registro gratis en PlayMetrics durante todo el año; el tryout oficial es en mayo). Aquí el mensaje es el de "siguiente nivel", no el de iniciación.</span><span lang="en">Teams that play leagues and tournaments. Entry is by tryout (free registration on PlayMetrics year-round; the official tryout is in May). Here the message is "next level", not beginners.</span></p></div>
+    </div>
+    <div class="quiet">
+      <p lang="es"><strong>Por qué no dos campañas.</strong> Con $990 al mes, dividir en dos campañas dejaría a cada una con la mitad del volumen y ninguna saldría de la fase de aprendizaje. Con una sola campaña y seis anuncios (dos de ellos dedicados a cada puerta) se aprende qué programa y qué ángulo convierte, y el reparto se decide con datos en la revisión del día 7.</p>
+      <p lang="en"><strong>Why not two campaigns.</strong> At $990 a month, splitting into two campaigns would leave each with half the volume and neither would exit the learning phase. With one campaign and six ads (two dedicated to each door), the campaign learns which program and which angle converts, and the split is decided with data at the day-7 review.</p>
+    </div>
+  </section>
+
+  <!-- ===== 04 PRESUPUESTO ===== -->
+  <section>
+    <h2><span lang="es">04 · Cómo se reparte el dinero</span><span lang="en">04 · How the budget is allocated</span></h2>
+    <p lang="es">El presupuesto se divide en tres bloques iguales. Cada bloque le habla a un tipo distinto de público, pero muestra <strong>exactamente los mismos seis anuncios</strong>.</p>
+    <p lang="en">The budget splits into three equal blocks. Each block speaks to a different type of audience, but runs <strong>exactly the same six ads</strong>.</p>
+    <div class="scroll"><table>
+      <thead><tr><th><span lang="es">Público</span><span lang="en">Audience</span></th><th><span lang="es">A quién alcanza</span><span lang="en">Who it reaches</span></th><th class="num"><span lang="es">Diario</span><span lang="en">Daily</span></th><th class="num"><span lang="es">Mensual</span><span lang="en">Monthly</span></th></tr></thead>
+      <tbody>
+        <tr><td><strong><span lang="es">Intereses</span><span lang="en">Interests</span></strong></td><td><span lang="es">Residentes del área de Las Vegas con interés declarado en fútbol y en paternidad.</span><span lang="en">Las Vegas-area residents with a stated interest in soccer and parenting.</span></td><td class="num"><span lang="es">$11</span><span lang="en">$11</span></td><td class="num"><span lang="es">$330</span><span lang="en">$330</span></td></tr>
+        <tr><td><strong><span lang="es">Audiencia similar</span><span lang="en">Lookalike audience</span></strong><span class="sub"><span lang="es">1 % más parecido</span><span lang="en">closest 1%</span></span></td><td><span lang="es">Personas que se parecen a quienes interactuaron con el Instagram de la academia en el último año.</span><span lang="en">People who resemble those who engaged with the academy's Instagram in the last year.</span></td><td class="num"><span lang="es">$11</span><span lang="en">$11</span></td><td class="num"><span lang="es">$330</span><span lang="en">$330</span></td></tr>
+        <tr><td><strong><span lang="es">Abierto</span><span lang="en">Broad</span></strong></td><td><span lang="es">Sin filtros de interés. Meta busca libremente dentro de la zona y el rango de edad. Es el control.</span><span lang="en">No interest filters. Meta searches freely within the area and age range. It is the control.</span></td><td class="num"><span lang="es">$11</span><span lang="en">$11</span></td><td class="num"><span lang="es">$330</span><span lang="en">$330</span></td></tr>
+      </tbody>
+      <tfoot><tr><td colspan="2">Total</td><td class="num"><span lang="es">$33</span><span lang="en">$33</span></td><td class="num"><span lang="es">$990</span><span lang="en">$990</span></td></tr></tfoot>
+    </table></div>
+    <p lang="es">Los tres comparten la misma zona (Las Vegas y 25 millas a la redonda, solo residentes) y el mismo rango de edad, 25 a 54 años, que es donde está la audiencia real de la cuenta.</p>
+    <p lang="en">All three share the same area (Las Vegas and a 25-mile radius, residents only) and the same age range, 25 to 54, which is where the account's real audience sits.</p>
+    <div class="quiet">
+      <p lang="es"><strong>Por qué tres bloques y no uno.</strong> Con el mismo presupuesto y los mismos anuncios, la única variable que cambia es el público. Si uno rinde mejor, la causa es identificable y el dinero se mueve hacia él con fundamento. En Miami esto permitió bajar el costo por conversación de $11,03 a $3,56 en once días.</p>
+      <p lang="en"><strong>Why three blocks instead of one.</strong> With the same budget and the same ads, the only variable that changes is the audience. If one performs better, the cause is identifiable and money moves toward it on solid ground. In Miami this brought the cost per conversation from $11.03 down to $3.56 in eleven days.</p>
+    </div>
+  </section>
+
+  <!-- ===== 05 DÓNDE ===== -->
+  <section>
+    <h2><span lang="es">05 · Dónde se muestra</span><span lang="en">05 · Where the ads run</span></h2>
+    <p lang="es">A <strong>residentes</strong> de Las Vegas y 25 millas a la redonda: cubre Las Vegas, North Las Vegas, Henderson, Spring Valley, Enterprise, Sunrise Manor y Summerlin, donde vive la audiencia de la cuenta, y las dos sedes de entrenamiento (Garside Junior High y Walter Junior High, en el oeste de la ciudad). La opción de incluir a "personas interesadas en la ubicación" queda apagada por la razón explicada arriba.</p>
+    <p lang="en">To <strong>residents</strong> of Las Vegas and a 25-mile radius: it covers Las Vegas, North Las Vegas, Henderson, Spring Valley, Enterprise, Sunrise Manor and Summerlin, where the account's audience lives, and both training venues (Garside Junior High and Walter Junior High, on the west side). The option to include "people interested in this location" stays off for the reason explained above.</p>
+  </section>
+
+  <!-- ===== 06 ANUNCIOS ===== -->
+  <section>
+    <h2><span lang="es">06 · Los seis anuncios</span><span lang="en">06 · The six ads</span></h2>
+    <p lang="es">Cada uno entra por un ángulo distinto. Los seis hablan de Las Vegas (sus coaches, sus equipos, sus familias) y no del primer equipo de Juventus, porque es lo que esta cuenta demostró que funciona. Ninguno promete selección ni usa precios o urgencia.</p>
+    <p lang="en">Each one takes a different angle. All six talk about Las Vegas (its coaches, its teams, its families) rather than Juventus' first team, because that is what this account proved works. None promises selection or uses prices or urgency.</p>
+    <div class="ads">
+      <div class="ad"><div class="ad-top"><span class="ad-kind">Video</span><span class="ad-name"><span lang="es">El coach</span><span lang="en">The coach</span></span></div><p><span lang="es">Un coach de la academia explica cómo se entrena aquí, con planos reales de la práctica nocturna. En Miami el anuncio del coach fue el mejor de la historia de la cuenta; en Las Vegas los coaches son el tema que más sube las vistas.</span><span lang="en">An academy coach explains how training works here, with real footage from night practice. In Miami the coach ad was the best in the account's history; in Las Vegas coaches are the topic that lifts views the most.</span></p></div>
+      <div class="ad"><div class="ad-top"><span class="ad-kind">Video</span><span class="ad-name"><span lang="es">Desde la banda</span><span lang="en">From the sideline</span></span></div><p><span lang="es">Padres y niños de la academia, sin guion, con material que ya grabó la academia. La prueba social que Miami no tenía.</span><span lang="en">Academy parents and kids, unscripted, from footage the academy already shot. The social proof Miami never had.</span></p></div>
+      <div class="ad"><div class="ad-top"><span class="ad-kind"><span lang="es">Imagen</span><span lang="en">Image</span></span><span class="ad-name"><span lang="es">Póster Las Vegas</span><span lang="en">Las Vegas poster</span></span></div><p><span lang="es">Niños reales de la academia con la ciudad de fondo: "Juventus Academy Las Vegas · ages 3–18". El formato de póster fue el anuncio más barato de la campaña de ID Camps en Chicago.</span><span lang="en">Real academy kids with the city behind them: "Juventus Academy Las Vegas · ages 3–18". The poster format was the cheapest ad of the ID Camps campaign in Chicago.</span></p></div>
+      <div class="ad"><div class="ad-top"><span class="ad-kind"><span lang="es">Imagen</span><span lang="en">Image</span></span><span class="ad-name"><span lang="es">Su primer equipo</span><span lang="en">His first team</span></span></div><p><span lang="es">Little Zebras, 3 a 5 años: "His first team. No tryout needed." Dirigido al padre de un niño pequeño, cuya preocupación real es que lo entrenen de forma apropiada para su edad.</span><span lang="en">Little Zebras, ages 3 to 5: "His first team. No tryout needed." Aimed at the parent of a small child, whose real concern is age-appropriate coaching.</span></p></div>
+      <div class="ad"><div class="ad-top"><span class="ad-kind"><span lang="es">Imagen</span><span lang="en">Image</span></span><span class="ad-name"><span lang="es">El siguiente nivel</span><span lang="en">The next level</span></span></div><p><span lang="es">Competitivo: "Already playing? Get to the next level." Para el padre del niño que ya juega y quiere más: liga, torneos, tryout.</span><span lang="en">Competitive: "Already playing? Get to the next level." For the parent of a child who already plays and wants more: league, tournaments, tryout.</span></p></div>
+      <div class="ad"><div class="ad-top"><span class="ad-kind"><span lang="es">Imagen</span><span lang="en">Image</span></span><span class="ad-name"><span lang="es">Cinco preguntas</span><span lang="en">Five questions</span></span></div><p><span lang="es">Qué preguntar antes de elegir academia (coaches certificados, metodología, grupos por edad y nivel, torneos, trato con padres). No vende: ayuda a decidir y convierte la comparación con otros clubes en una conversación.</span><span lang="en">What to ask before choosing an academy (certified coaches, methodology, grouping by age and level, tournaments, how coaches talk with parents). It does not sell: it helps decide and turns the comparison with other clubs into a conversation.</span></p></div>
+    </div>
+    <p class="fine"><span lang="es">En reserva: "Named after a legend" (los diez equipos con nombre de leyenda), que entra solo cuando un público empiece a ver los anuncios más de tres veces.</span><span lang="en">In reserve: "Named after a legend" (the ten teams named after legends), which enters only when an audience starts seeing the ads more than three times.</span></p>
+  </section>
+
+  <!-- ===== 07 EXPECTATIVA ===== -->
+  <section>
+    <h2><span lang="es">07 · Qué se espera obtener</span><span lang="en">07 · What to expect</span></h2>
+    <div class="scroll"><table>
+      <thead><tr><th><span lang="es">Escenario</span><span lang="en">Scenario</span></th><th class="num"><span lang="es">Costo por conversación</span><span lang="en">Cost per conversation</span></th><th class="num"><span lang="es">Conversaciones/mes</span><span lang="en">Conversations/month</span></th><th><span lang="es">Base</span><span lang="en">Basis</span></th></tr></thead>
+      <tbody>
+        <tr><td><strong><span lang="es">Objetivo</span><span lang="en">Target</span></strong></td><td class="num"><span lang="es">$4</span><span lang="en">$4</span></td><td class="num">~248</td><td><span lang="es">Lo que esta estructura está logrando en Miami, con margen por ser una cuenta nueva.</span><span lang="en">What this structure is achieving in Miami, with a margin for being a new account.</span></td></tr>
+        <tr><td><strong><span lang="es">Miami, hoy</span><span lang="en">Miami, today</span></strong></td><td class="num"><span lang="es">$3,56</span><span lang="en">$3.56</span></td><td class="num">~278</td><td><span lang="es">Pre-Academy Miami, día 11 con la misma estructura (99 conversaciones, $352,92).</span><span lang="en">Pre-Academy Miami, day 11 with the same structure (99 conversations, $352.92).</span></td></tr>
+        <tr><td><strong><span lang="es">Mejor registro previo de Las Vegas</span><span lang="en">Las Vegas previous best</span></strong></td><td class="num"><span lang="es">$8,09</span><span lang="en">$8.09</span></td><td class="num">~122</td><td><span lang="es">Una promoción de Instagram, sin públicos ni comparación de anuncios.</span><span lang="en">One Instagram boost, with no audiences and no ad comparison.</span></td></tr>
+        <tr><td><strong><span lang="es">Promedio previo de Las Vegas</span><span lang="en">Las Vegas previous average</span></strong></td><td class="num"><span lang="es">$9,35</span><span lang="en">$9.35</span></td><td class="num">~106</td><td><span lang="es">Las tres promociones de mensajes, incluida la primera a $19,23.</span><span lang="en">All three message boosts, including the first one at $19.23.</span></td></tr>
+      </tbody>
+    </table></div>
+    <p lang="es">Cuatro cambios sostienen el objetivo. <strong>Uno:</strong> seis anuncios compitiendo entre sí, frente a una sola publicación promocionada. <strong>Dos:</strong> tres públicos separados que permiten ver cuál convierte y concentrar el dinero ahí. <strong>Tres:</strong> solo residentes, sin turistas. <strong>Cuatro:</strong> inversión continua en vez de ráfagas, para que el algoritmo aprenda y el padre encuentre a la academia el día que decide.</p>
+    <p lang="en">Four changes support the target. <strong>One:</strong> six ads competing against each other, instead of a single boosted post. <strong>Two:</strong> three separate audiences, making it possible to see which converts and concentrate spend there. <strong>Three:</strong> residents only, no tourists. <strong>Four:</strong> continuous investment instead of bursts, so the algorithm learns and parents find the academy on the day they decide.</p>
+    <div class="callout">
+      <h4><span lang="es">Cómo se alcanza</span><span lang="en">How it gets reached</span></h4>
+      <p lang="es">No el primer día. Los primeros días el algoritmo reparte el presupuesto entre los seis anuncios y los tres públicos para aprender; el costo arranca alto y baja a medida que concentra la entrega en lo que rinde. Las revisiones del día 7 y el día 12 son las que importan.</p>
+      <p lang="en">Not on day one. In the first days the algorithm spreads budget across the six ads and three audiences to learn; cost starts high and drops as delivery concentrates on what performs. The day 7 and day 12 reviews are the ones that matter.</p>
+    </div>
+  </section>
+
+  <!-- ===== 08 CALENDARIO ===== -->
+  <section>
+    <h2><span lang="es">08 · Calendario de revisión</span><span lang="en">08 · Review schedule</span></h2>
+    <div class="phases">
+      <div class="phase"><div class="phase-when"><span lang="es">Antes de lanzar</span><span lang="en">Before launch</span></div><div><h4><span lang="es">Tres requisitos</span><span lang="en">Three requirements</span></h4><p><span lang="es">Método de pago en la cuenta nueva; número de WhatsApp (o decisión de usar Instagram Direct); los seis anuncios producidos y aprobados.</span><span lang="en">Payment method on the new account; WhatsApp number (or the decision to use Instagram Direct); the six ads produced and approved.</span></p></div></div>
+      <div class="phase"><div class="phase-when"><span lang="es">Día 1</span><span lang="en">Day 1</span></div><div><h4><span lang="es">Verificación de aprobación</span><span lang="en">Approval check</span></h4><p><span lang="es">Que los 18 anuncios estén activos y sin rechazos. No se evalúa rendimiento.</span><span lang="en">Confirm the 18 ads are live and none were rejected. No performance evaluation.</span></p></div></div>
+      <div class="phase"><div class="phase-when"><span lang="es">Día 3</span><span lang="en">Day 3</span></div><div><h4><span lang="es">Tamaño de la audiencia similar</span><span lang="en">Lookalike size</span></h4><p><span lang="es">Si quedó demasiado pequeña para gastar su presupuesto, se amplía del 1 % al 3 %.</span><span lang="en">If it is too small to spend its budget, it is widened from 1% to 3%.</span></p></div></div>
+      <div class="phase"><div class="phase-when"><span lang="es">Días 4–6</span><span lang="en">Days 4–6</span></div><div><h4><span lang="es">Acumulación</span><span lang="en">Accumulation</span></h4><p><span lang="es">Se registran métricas sin intervenir. Tocar la campaña aquí reinicia el aprendizaje.</span><span lang="en">Metrics are logged without intervening. Changing the campaign here resets learning.</span></p></div></div>
+      <div class="phase"><div class="phase-when"><span lang="es">Día 7</span><span lang="en">Day 7</span></div><div><h4><span lang="es">Primera lectura</span><span lang="en">First read</span></h4><p><span lang="es">Comparación entre los tres públicos y entre las dos puertas (qué programa generó las conversaciones). Primera redistribución, de máximo un 20–30 % del presupuesto.</span><span lang="en">Comparison across the three audiences and between the two doors (which program generated the conversations). First reallocation, at most 20–30% of the budget.</span></p></div></div>
+      <div class="phase"><div class="phase-when"><span lang="es">Día 12</span><span lang="en">Day 12</span></div><div><h4><span lang="es">Segundo ajuste</span><span lang="en">Second adjustment</span></h4><p><span lang="es">Con unas 20 conversaciones acumuladas la comparación ya es sólida.</span><span lang="en">With about 20 accumulated conversations the comparison is solid.</span></p></div></div>
+      <div class="phase"><div class="phase-when"><span lang="es">Día 30</span><span lang="en">Day 30</span></div><div><h4><span lang="es">Evaluación de mes</span><span lang="en">Monthly evaluation</span></h4><p><span lang="es">Costo real frente al objetivo, cuántas conversaciones terminaron en inscripción, y decisión del mes siguiente.</span><span lang="en">Actual cost against target, how many conversations ended in enrollment, and next month's decision.</span></p></div></div>
+    </div>
+  </section>
+
+  <!-- ===== 09 DECISIONES ===== -->
+  <section>
+    <h2><span lang="es">09 · Decisiones que conviene explicar</span><span lang="en">09 · Decisions worth explaining</span></h2>
+    <ul class="facts">
+      <li><span class="mark">1</span><div><p><span lang="es"><strong>Se abrió una cuenta publicitaria nueva en vez de seguir con la de Instagram.</strong></span><span lang="en"><strong>A new ad account was opened instead of continuing with the Instagram one.</strong></span></p><p class="why"><span lang="es">La cuenta creada por el botón "Promocionar" no permite públicos, comparación de anuncios ni gestión desde el administrador. Su historial queda documentado en este informe como línea base; nada se pierde.</span><span lang="en">The account created by the "Boost" button allows no audiences, no ad comparison and no management from Ads Manager. Its history is documented in this report as the baseline; nothing is lost.</span></p></div></li>
+      <li><span class="mark">2</span><div><p><span lang="es"><strong>Todo el presupuesto va a público nuevo.</strong></span><span lang="en"><strong>The entire budget goes to new audiences.</strong></span></p><p class="why"><span lang="es">Reservar un 20–30 % para volver a impactar a quienes ya mostraron interés equivaldría a unos $300 al mes: menos de media conversación al día, insuficiente para que el algoritmo aprenda. Se activa cuando el presupuesto permita $400–500 más.</span><span lang="en">Reserving 20–30% to re-reach people who already showed interest would be about $300 a month: under half a conversation a day, too little for the algorithm to learn. It gets activated when the budget allows $400–500 more.</span></p></div></li>
+      <li><span class="mark">3</span><div><p><span lang="es"><strong>Se rechazan las "mejoras automáticas" de Meta.</strong></span><span lang="en"><strong>Meta's "automatic enhancements" are declined.</strong></span></p><p class="why"><span lang="es">Recortes, música, texto generado y traducción automática se apagan: las piezas llevan la identidad oficial de Juventus Academy y alterarlas impediría comparar los anuncios entre sí.</span><span lang="en">Cropping, music, generated text and auto-translation are switched off: the pieces carry Juventus Academy's official identity and altering them would make the ads impossible to compare.</span></p></div></li>
+      <li><span class="mark">4</span><div><p><span lang="es"><strong>Los anuncios salen en inglés, sin precios, sin cupos y sin urgencia.</strong></span><span lang="en"><strong>The ads run in English, with no prices, no spots and no urgency.</strong></span></p><p class="why"><span lang="es">Es la línea de todas las cuentas de Juventus. En el análisis de 378 posts de Las Vegas, la urgencia y el precio no ayudaron en ningún caso. Una versión en español se puede probar como anuncio adicional en la segunda ronda.</span><span lang="en">That is the line across all Juventus accounts. In the analysis of 378 Las Vegas posts, urgency and price never helped. A Spanish version can be tested as an extra ad in the second round.</span></p></div></li>
+    </ul>
+  </section>
+
+  <!-- ===== 10 MEJORAR ===== -->
+  <section>
+    <h2><span lang="es">10 · Cómo mejorar el rendimiento</span><span lang="en">10 · How to improve performance</span></h2>
+    <div class="phases">
+      <div class="phase"><div class="phase-when"><span lang="es">Operación</span><span lang="en">Operations</span></div><div><h4><span lang="es">Un número de WhatsApp dedicado y quién responde</span><span lang="en">A dedicated WhatsApp number and who answers</span></h4><p><span lang="es">La conversación vale lo que vale la respuesta. Un número propio de Las Vegas, atendido el mismo día, es la primera palanca.</span><span lang="en">A conversation is worth what the reply is worth. A dedicated Las Vegas number, answered the same day, is the first lever.</span></p></div></div>
+      <div class="phase"><div class="phase-when"><span lang="es">Medición</span><span lang="en">Measurement</span></div><div><h4><span lang="es">Registrar qué conversaciones terminan en inscripción</span><span lang="en">Track which conversations end in enrollment</span></h4><p><span lang="es">Hoy se puede medir el costo por conversación; no cuántas se vuelven un alumno. Con ese dato, la optimización persigue clientes reales y no conversaciones baratas.</span><span lang="en">Today cost per conversation can be measured; not how many become a player. With that data, optimization chases real customers rather than cheap conversations.</span></p></div></div>
+      <div class="phase"><div class="phase-when"><span lang="es">Técnico</span><span lang="en">Technical</span></div><div><h4><span lang="es">Instalar el píxel en jacademylasvegas.com</span><span lang="en">Install the pixel on jacademylasvegas.com</span></h4><p><span lang="es">El píxel ya existe y está asignado a la cuenta nueva; falta instalarlo en la web (pendiente el acceso a WordPress). Permitiría públicos de quienes visitaron la página de programas o la de tryouts.</span><span lang="en">The pixel already exists and is assigned to the new account; it still needs installing on the website (WordPress access pending). It would allow audiences of people who visited the programs or tryouts pages.</span></p></div></div>
+      <div class="phase"><div class="phase-when"><span lang="es">Eficiencia</span><span lang="en">Efficiency</span></div><div><h4><span lang="es">Cargar la lista de familias ya inscritas</span><span lang="en">Upload the list of enrolled families</span></h4><p><span lang="es">Para excluirlas de la campaña y, cuando pase de 50 familias, construir un público similar a los que sí se inscribieron.</span><span lang="en">To exclude them from the campaign and, once it exceeds 50 families, build a lookalike of those who actually enrolled.</span></p></div></div>
+      <div class="phase"><div class="phase-when"><span lang="es">Material</span><span lang="en">Material</span></div><div><h4><span lang="es">Fotos y video de los Little Zebras</span><span lang="en">Little Zebras photos and video</span></h4><p><span lang="es">El programa de 3 a 5 años arrancó el 24 de septiembre y todavía no hay fotos propias de esos niños. Las de la web son de Miami y no se usan. Una sesión de 20 minutos en una práctica resuelve el anuncio más importante de la campaña.</span><span lang="en">The ages 3–5 program started September 24 and there are no own photos of those kids yet. The website ones are from Miami and are not used. A 20-minute session at one practice solves the campaign's most important ad.</span></p></div></div>
+    </div>
+  </section>
+
+  <!-- ===== 11 RESULTADOS ===== -->
+  <section id="resultados">
+    <h2><span lang="es">11 · Resultados: antes y después</span><span lang="en">11 · Results: before and after</span></h2>
+    
+  <p lang="es">La campaña todavía no se ha lanzado. Esta sección queda preparada para mostrar, con las mismas cifras y en la misma tabla, lo que costaba una conversación <strong>antes</strong> (promociones desde Instagram) y lo que cuesta <strong>después</strong> (campaña nueva). Se actualiza en cada revisión.</p>
+  <p lang="en">The campaign has not launched yet. This section is ready to show, with the same figures in the same table, what a conversation cost <strong>before</strong> (Instagram boosts) and what it costs <strong>after</strong> (new campaign). It is updated at every review.</p>
+  <div class="scroll"><table>
+    <thead><tr><th><span lang="es">Periodo</span><span lang="en">Period</span></th><th class="num"><span lang="es">Inversión</span><span lang="en">Spend</span></th><th class="num"><span lang="es">Conversaciones</span><span lang="en">Conversations</span></th><th class="num"><span lang="es">Costo por conversación</span><span lang="en">Cost per conversation</span></th></tr></thead>
+    <tbody>
+      <tr><td><strong><span lang="es">Antes: promociones de Instagram</span><span lang="en">Before: Instagram boosts</span></strong><span class="sub">oct-2025 → ago-2026 · 3 <span lang="es">promociones de mensajes</span><span lang="en">message boosts</span></span></td><td class="num"><span lang="es">$991,31</span><span lang="en">$991.31</span></td><td class="num">106</td><td class="num"><span lang="es">$9,35</span><span lang="en">$9.35</span></td></tr>
+      <tr><td><strong><span lang="es">Después: campaña nueva</span><span lang="en">After: new campaign</span></strong><span class="sub"><span lang="es">pendiente de lanzamiento</span><span lang="en">pending launch</span></span></td><td class="num">—</td><td class="num">—</td><td class="num">—</td></tr>
+    </tbody></table></div>
+  <p class="fine"><span lang="es">Además de las conversaciones se registrará cuántas terminan en inscripción, dato que hoy no existe para Las Vegas.</span><span lang="en">Alongside conversations, the number that end in enrollment will be tracked, a figure that does not exist for Las Vegas today.</span></p>
+
+  </section>
+
+  <footer>
+    <span lang="es">Propuesta preparada el 2 de octubre de 2026 · Juventus Academy Las Vegas · Cuenta publicitaria nueva creada el mismo día.<br>Cifras de referencia: historial de promociones de Instagram (oct-2025 a ago-2026), auditoría de @jacademylasvegas (386 posts, may-2025 a sep-2026) y campaña Pre-Academy Miami (sep-oct 2026).</span>
+    <span lang="en">Proposal prepared on October 2, 2026 · Juventus Academy Las Vegas · New ad account created the same day.<br>Reference figures: Instagram boost history (Oct 2025 to Aug 2026), @jacademylasvegas audit (386 posts, May 2025 to Sep 2026) and the Pre-Academy Miami campaign (Sep–Oct 2026).</span>
+  </footer>
+</div>
+<script>
+(function(){var r=document.documentElement,a=document.getElementById('btn-es'),b=document.getElementById('btn-en');
+function set(l){if(l==='en')r.setAttribute('data-lang','en');else r.removeAttribute('data-lang');a.setAttribute('aria-pressed',l==='en'?'false':'true');b.setAttribute('aria-pressed',l==='en'?'true':'false');try{localStorage.setItem('jlv-lang',l)}catch(e){}}
+a.addEventListener('click',function(){set('es')});b.addEventListener('click',function(){set('en')});
+var s=null;try{s=localStorage.getItem('jlv-lang')}catch(e){}
+if(s==='en')set('en');else if(!s&&navigator.language&&navigator.language.slice(0,2)==='en')set('en');})();
+</script>
+</body>
+</html>
