@@ -79,13 +79,71 @@
   .langtoggle button[aria-pressed="true"] { background:var(--ink); color:var(--paper); }
   :root[data-lang="en"] [lang="es"] { display:none; }
   :root:not([data-lang="en"]) [lang="en"] { display:none; }
+  /* barra superior: pestañas + idioma */
+  .topbar { position:sticky; top:env(safe-area-inset-top,0px); z-index:20; display:flex; justify-content:space-between; align-items:center; gap:10px; flex-wrap:wrap; padding:10px 0 12px; background:linear-gradient(var(--paper) 72%,transparent); }
+  .tabs { display:inline-flex; border:1px solid var(--line); background:var(--card); padding:2px; }
+  .tabs a { font-family:var(--mono); font-size:11px; letter-spacing:.08em; text-transform:uppercase; color:var(--ink-3); text-decoration:none; padding:6px 13px; }
+  .tabs a[aria-current="page"] { background:var(--ink); color:var(--paper); }
+  /* vista "antes y después" */
+  :root { --red:#B8142F; --red-bg:#F8E4E7; }
+  @media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) { --red:#FF4D6D; --red-bg:#2E171C; } }
+  :root[data-theme="dark"] { --red:#FF4D6D; --red-bg:#2E171C; }
+  .band { background:var(--ink); color:var(--paper); padding:28px 28px 24px; margin-top:8px; }
+  .band .kicker { color:#CBAB4E; }
+  .band h1 { color:var(--paper); font-size:clamp(30px,6vw,46px); }
+  .band h1 em { font-style:normal; color:#FF6B85; }
+  .band .standfirst { color:#C9CCD2; }
+  .keys { display:grid; grid-template-columns:repeat(auto-fit,minmax(170px,1fr)); gap:1px; background:#3A3D42; border:1px solid #3A3D42; margin-top:22px; }
+  .keys div { background:#1E2024; padding:14px 16px; }
+  .keys dt { font-family:var(--mono); font-size:10px; letter-spacing:.09em; text-transform:uppercase; color:#9DA1A8; }
+  .keys dd { margin:4px 0 0; font-family:var(--mono); font-weight:500; font-size:22px; line-height:1.15; color:#ECEDEF; font-variant-numeric:tabular-nums; }
+  .keys dd small { display:block; font-family:var(--body); font-size:12px; color:#9DA1A8; margin-top:3px; line-height:1.4; }
+  .keys .delta { color:#72C189; font-size:13px; margin-left:6px; }
+  .chart { background:var(--card); border:1px solid var(--line); padding:20px 22px 14px; margin:22px 0; }
+  .bars { display:grid; gap:12px; }
+  .bar-row { display:grid; grid-template-columns:minmax(150px,230px) 1fr 76px; gap:14px; align-items:center; }
+  .bar-label b { display:block; font-size:14px; }
+  .bar-label span { display:block; font-size:12px; color:var(--ink-3); line-height:1.35; }
+  .bar-track { position:relative; height:22px; }
+  .bar-track i { position:absolute; left:0; top:0; bottom:0; background:var(--line); border-radius:0 4px 4px 0; }
+  .is-new .bar-track i { background:var(--red); }
+  .is-target .bar-track i { background:transparent; border:2px dashed var(--gold); border-left:0; }
+  .is-new .bar-label b { color:var(--red); }
+  .is-target .bar-label b { color:var(--gold); }
+  .bar-val { text-align:right; font-family:var(--mono); font-weight:500; font-variant-numeric:tabular-nums; }
+  .avg { position:absolute; top:-8px; bottom:-8px; border-left:2px dashed var(--ink-3); }
+  .legend { display:flex; flex-wrap:wrap; gap:18px; margin-top:16px; font-size:12px; color:var(--ink-3); }
+  .legend i { display:inline-block; width:12px; height:12px; border-radius:3px; vertical-align:-1px; margin-right:6px; }
+  .legend .dash { width:0; height:12px; border-left:2px dashed var(--ink-3); border-radius:0; }
+  tr.now td { background:var(--red-bg); }
+  .duo { display:grid; grid-template-columns:repeat(auto-fit,minmax(260px,1fr)); gap:14px; margin:22px 0; }
+  .side { background:var(--card); border:1px solid var(--line); padding:20px 22px; }
+  .side h4 { margin:0 0 12px; font-family:var(--mono); font-size:11px; letter-spacing:.08em; text-transform:uppercase; color:var(--ink-3); }
+  .side.is-new h4 { color:var(--red); }
+  .side dl { margin:0; display:grid; gap:10px; }
+  .side dl div { display:flex; justify-content:space-between; gap:12px; border-bottom:1px solid var(--line-soft); padding-bottom:8px; }
+  .side dl div:last-child { border-bottom:0; padding-bottom:0; }
+  .side dt { color:var(--ink-2); font-size:14px; }
+  .side dd { margin:0; font-family:var(--mono); font-weight:500; font-variant-numeric:tabular-nums; text-align:right; }
+  .notes { display:grid; grid-template-columns:repeat(auto-fit,minmax(240px,1fr)); gap:14px; margin:22px 0; }
+  .notes div { background:var(--card-2); border:1px solid var(--line-soft); padding:18px 20px; font-size:14px; color:var(--ink-2); }
+  .notes b { display:block; color:var(--ink); margin-bottom:4px; }
+  .log { list-style:none; margin:22px 0; padding:0; border:1px solid var(--line); background:var(--card); }
+  .log li { display:grid; grid-template-columns:150px 1fr; gap:14px; padding:14px 20px; border-bottom:1px solid var(--line-soft); font-size:14px; color:var(--ink-2); }
+  .log li:last-child { border-bottom:0; }
+  .log .d { font-family:var(--mono); font-size:12px; color:var(--gold); }
+  @media (max-width:620px) { .bar-row { grid-template-columns:1fr 64px; } .bar-label { grid-column:1 / -1; } .log li { grid-template-columns:1fr; gap:4px; } }
   @media (max-width:540px) { .phase { grid-template-columns:1fr; gap:6px; } .sum-grid { grid-template-columns:1fr 1fr; } }
 </style>
 </head>
 <body>
 <div class="wrap">
-  <div class="langbar"><div class="langtoggle" role="group" aria-label="Idioma / Language"><button type="button" id="btn-es" aria-pressed="true">Español</button><button type="button" id="btn-en" aria-pressed="false">English</button></div></div>
+  <div class="topbar">
+    <nav class="tabs" aria-label="Secciones"><a href="#propuesta" aria-current="page"><span lang="es">Propuesta</span><span lang="en">Proposal</span></a><a href="#resultados"><span lang="es">Antes y después</span><span lang="en">Before & after</span></a></nav>
+    <div class="langtoggle" role="group" aria-label="Idioma / Language"><button type="button" id="btn-es" aria-pressed="true">Español</button><button type="button" id="btn-en" aria-pressed="false">English</button></div>
+  </div>
 
+<div id="v-propuesta">
   <header class="cover">
     <p class="kicker"><span lang="es">Juventus Academy Las Vegas · Propuesta de inversión publicitaria</span><span lang="en">Juventus Academy Las Vegas · Advertising investment proposal</span></p>
     <h1 lang="es">Campaña de captación<br>Las Vegas</h1>
@@ -293,19 +351,10 @@
   </section>
 
   <!-- ===== 11 RESULTADOS ===== -->
-  <section id="resultados">
+  <section>
     <h2><span lang="es">11 · Resultados: antes y después</span><span lang="en">11 · Results: before and after</span></h2>
-    
-  <p lang="es">La campaña todavía no se ha lanzado. Esta sección queda preparada para mostrar, con las mismas cifras y en la misma tabla, lo que costaba una conversación <strong>antes</strong> (promociones desde Instagram) y lo que cuesta <strong>después</strong> (campaña nueva). Se actualiza en cada revisión.</p>
-  <p lang="en">The campaign has not launched yet. This section is ready to show, with the same figures in the same table, what a conversation cost <strong>before</strong> (Instagram boosts) and what it costs <strong>after</strong> (new campaign). It is updated at every review.</p>
-  <div class="scroll"><table>
-    <thead><tr><th><span lang="es">Periodo</span><span lang="en">Period</span></th><th class="num"><span lang="es">Inversión</span><span lang="en">Spend</span></th><th class="num"><span lang="es">Conversaciones</span><span lang="en">Conversations</span></th><th class="num"><span lang="es">Costo por conversación</span><span lang="en">Cost per conversation</span></th></tr></thead>
-    <tbody>
-      <tr><td><strong><span lang="es">Antes: promociones de Instagram</span><span lang="en">Before: Instagram boosts</span></strong><span class="sub">oct-2025 → ago-2026 · 3 <span lang="es">promociones de mensajes</span><span lang="en">message boosts</span></span></td><td class="num"><span lang="es">$991,31</span><span lang="en">$991.31</span></td><td class="num">106</td><td class="num"><span lang="es">$9,35</span><span lang="en">$9.35</span></td></tr>
-      <tr><td><strong><span lang="es">Después: campaña nueva</span><span lang="en">After: new campaign</span></strong><span class="sub"><span lang="es">pendiente de lanzamiento</span><span lang="en">pending launch</span></span></td><td class="num">—</td><td class="num">—</td><td class="num">—</td></tr>
-    </tbody></table></div>
-  <p class="fine"><span lang="es">Además de las conversaciones se registrará cuántas terminan en inscripción, dato que hoy no existe para Las Vegas.</span><span lang="en">Alongside conversations, the number that end in enrollment will be tracked, a figure that does not exist for Las Vegas today.</span></p>
-
+    <p lang="es">El seguimiento de la campaña, comparado con lo que costaba una conversación antes, está en la pestaña <a href="#resultados"><strong>Antes y después</strong></a> de este mismo documento. Se actualiza en cada revisión.</p>
+    <p lang="en">The campaign's tracking, compared with what a conversation cost before, is in the <a href="#resultados"><strong>Before & after</strong></a> tab of this same document. It is updated at every review.</p>
   </section>
 
   <footer>
@@ -313,7 +362,108 @@
     <span lang="en">Proposal prepared on October 2, 2026 · Juventus Academy Las Vegas · New ad account created the same day.<br>Reference figures: Instagram boost history (Oct 2025 to Aug 2026), @jacademylasvegas audit (386 posts, May 2025 to Sep 2026) and the Pre-Academy Miami campaign (Sep–Oct 2026).</span>
   </footer>
 </div>
+<div id="v-resultados" hidden>
+
+  <header class="band">
+    <p class="kicker"><span lang="es">Juventus Academy Las Vegas · Publicidad en Facebook e Instagram</span><span lang="en">Juventus Academy Las Vegas · Facebook and Instagram advertising</span></p>
+    <h1 lang="es">Campaña nueva <em>vs.</em><br>lo que se hacía antes</h1>
+    <h1 lang="en">New campaign <em>vs.</em><br>what was done before</h1>
+    <p class="standfirst"><span lang="es">Cuánto cuesta que un padre escriba desde un anuncio, comparado con lo que costaba en cada promoción anterior de la cuenta.</span><span lang="en">How much it costs for a parent to message from an ad, compared with what it cost in each previous boost of the account.</span></p>
+    <dl class="keys">
+      
+      <div><dt><span lang="es">Antes</span><span lang="en">Before</span></dt><dd><span lang="es">$9,35</span><span lang="en">$9.35</span><small><span lang="es">por conversación · 106 conversaciones en 3 promociones</span><span lang="en">per conversation · 106 conversations across 3 boosts</span></small></dd></div>
+      <div><dt><span lang="es">Objetivo</span><span lang="en">Target</span></dt><dd><span lang="es">$4</span><span lang="en">$4</span><small><span lang="es">por conversación con la campaña nueva</span><span lang="en">per conversation with the new campaign</span></small></dd></div>
+      <div><dt><span lang="es">Esperado</span><span lang="en">Expected</span></dt><dd>~250<small><span lang="es">conversaciones al mes con $990</span><span lang="en">conversations a month on $990</span></small></dd></div>
+      <div><dt><span lang="es">Estado</span><span lang="en">Status</span></dt><dd><span lang="es">Pendiente</span><span lang="en">Pending</span><small><span lang="es">la campaña aún no se lanza; esta pestaña se llena con cada revisión</span><span lang="en">the campaign has not launched; this tab fills in at every review</span></small></dd></div>
+    </dl>
+    <p class="fine" style="color:#9DA1A8"><span lang="es">Datos del historial de la cuenta de Instagram (oct-2025 → feb-2026).</span><span lang="en">Data from the Instagram account history (Oct 2025 → Feb 2026).</span></p>
+  </header>
+
+  <section>
+    <h2><span lang="es">Costo por conversación, campaña por campaña</span><span lang="en">Cost per conversation, campaign by campaign</span></h2>
+    <p lang="es">Todas las promociones de la cuenta que buscaban mensajes. Cada barra es lo que costó, en promedio, que un padre iniciara una conversación. Más corta es mejor.</p>
+    <p lang="en">Every boost on the account that aimed for messages. Each bar is what it cost, on average, for a parent to start a conversation. Shorter is better.</p>
+    <div class="chart"><div class="bars">
+      <div class="bar-row">
+        <div class="bar-label"><b><span lang="es">Oct–nov 2025</span><span lang="en">Oct–Nov 2025</span></b><span><span lang="es">1.ª promoción de mensajes · 30 días</span><span lang="en">1st message boost · 30 days</span></span></div>
+        <div class="bar-track"><i style="width:96.2%"></i><span class="avg" style="left:46.8%"></span></div>
+        <div class="bar-val"><span lang="es">$19,23</span><span lang="en">$19.23</span></div>
+      </div>
+      <div class="bar-row">
+        <div class="bar-label"><b><span lang="es">Nov–dic 2025</span><span lang="en">Nov–Dec 2025</span></b><span><span lang="es">2.ª promoción de mensajes · 30 días</span><span lang="en">2nd message boost · 30 days</span></span></div>
+        <div class="bar-track"><i style="width:40.5%"></i><span class="avg" style="left:46.8%"></span></div>
+        <div class="bar-val"><span lang="es">$8,09</span><span lang="en">$8.09</span></div>
+      </div>
+      <div class="bar-row">
+        <div class="bar-label"><b><span lang="es">Ene–feb 2026</span><span lang="en">Jan–Feb 2026</span></b><span><span lang="es">3.ª promoción de mensajes · 30 días</span><span lang="en">3rd message boost · 30 days</span></span></div>
+        <div class="bar-track"><i style="width:42.2%"></i><span class="avg" style="left:46.8%"></span></div>
+        <div class="bar-val"><span lang="es">$8,44</span><span lang="en">$8.44</span></div>
+      </div>
+      <div class="bar-row is-target">
+        <div class="bar-label"><b><span lang="es">Campaña nueva</span><span lang="en">New campaign</span></b><span><span lang="es">objetivo · pendiente de lanzamiento</span><span lang="en">target · pending launch</span></span></div>
+        <div class="bar-track"><i style="width:20.0%"></i><span class="avg" style="left:46.8%"></span></div>
+        <div class="bar-val"><span lang="es">$4,00</span><span lang="en">$4.00</span></div>
+      </div></div>
+      <div class="legend"><span><i style="background:var(--line)"></i><span lang="es">Promociones anteriores</span><span lang="en">Previous boosts</span></span><span><i style="background:var(--red)"></i><span lang="es">Campaña nueva</span><span lang="en">New campaign</span></span><span><i style="border:2px dashed var(--gold);background:transparent"></i><span lang="es">Objetivo</span><span lang="en">Target</span></span><span><i class="dash"></i><span lang="es">Promedio anterior</span><span lang="en">Previous average</span>: <span lang="es">$9,35</span><span lang="en">$9.35</span></span></div>
+    </div>
+    <div class="scroll"><table>
+      <thead><tr><th><span lang="es">Campaña</span><span lang="en">Campaign</span></th><th class="num"><span lang="es">Conversaciones</span><span lang="en">Conversations</span></th><th class="num"><span lang="es">Inversión</span><span lang="en">Spend</span></th><th class="num"><span lang="es">Costo c/u</span><span lang="en">Cost each</span></th><th class="num"><span lang="es">% que hace clic</span><span lang="en">% who click</span></th></tr></thead>
+      <tbody>
+          <tr><td><strong><span lang="es">Oct–nov 2025</span><span lang="en">Oct–Nov 2025</span></strong><span class="sub"><span lang="es">1.ª promoción de mensajes · 30 días</span><span lang="en">1st message boost · 30 days</span></span></td>
+            <td class="num">11</td><td class="num"><span lang="es">$211,53</span><span lang="en">$211.53</span></td><td class="num"><strong><span lang="es">$19,23</span><span lang="en">$19.23</span></strong></td><td class="num">0<span lang="es">,</span><span lang="en">.</span>66 %</td></tr>
+          <tr><td><strong><span lang="es">Nov–dic 2025</span><span lang="en">Nov–Dec 2025</span></strong><span class="sub"><span lang="es">2.ª promoción de mensajes · 30 días</span><span lang="en">2nd message boost · 30 days</span></span></td>
+            <td class="num">63</td><td class="num"><span lang="es">$509,78</span><span lang="en">$509.78</span></td><td class="num"><strong><span lang="es">$8,09</span><span lang="en">$8.09</span></strong></td><td class="num">0<span lang="es">,</span><span lang="en">.</span>77 %</td></tr>
+          <tr><td><strong><span lang="es">Ene–feb 2026</span><span lang="en">Jan–Feb 2026</span></strong><span class="sub"><span lang="es">3.ª promoción de mensajes · 30 días</span><span lang="en">3rd message boost · 30 days</span></span></td>
+            <td class="num">32</td><td class="num"><span lang="es">$270,00</span><span lang="en">$270.00</span></td><td class="num"><strong><span lang="es">$8,44</span><span lang="en">$8.44</span></strong></td><td class="num">0<span lang="es">,</span><span lang="en">.</span>71 %</td></tr>
+          <tr><td><strong><span lang="es">Campaña nueva</span><span lang="en">New campaign</span></strong><span class="sub"><span lang="es">objetivo · pendiente de lanzamiento</span><span lang="en">target · pending launch</span></span></td>
+            <td class="num">—</td><td class="num">—</td><td class="num"><strong><span lang="es">$4,00</span><span lang="en">$4.00</span></strong><span lang="es"> <span class="sub">objetivo</span></span><span lang="en"> <span class="sub">target</span></span></td><td class="num">—</td></tr></tbody>
+      <tfoot><tr><td><span lang="es">Todas las anteriores</span><span lang="en">All previous</span></td><td class="num">106</td><td class="num"><span lang="es">$991,31</span><span lang="en">$991.31</span></td><td class="num"><span lang="es">$9,35</span><span lang="en">$9.35</span></td><td class="num">0<span lang="es">,</span><span lang="en">.</span>73 %</td></tr></tfoot>
+    </table></div>
+    <p class="fine"><span lang="es">Además hubo 15 promociones de clics en el enlace ($1.763,87) y 3 de visitas al perfil ($402,58) que no buscaban conversaciones y no se pueden comparar: no dejaron ningún resultado medible.</span><span lang="en">There were also 15 link-click boosts ($1,763.87) and 3 profile-visit boosts ($402.58) that did not aim for conversations and cannot be compared: they left no measurable result.</span></p>
+  </section>
+
+  <section>
+    <h2><span lang="es">Mismo dinero, más padres escribiendo</span><span lang="en">Same money, more parents writing</span></h2>
+    <p lang="es">Comparación directa por día: lo que daban las promociones de mensajes frente a la campaña nueva.</p>
+    <p lang="en">Direct day-by-day comparison: what the message boosts delivered versus the new campaign.</p>
+    <div class="duo">
+      <div class="side"><h4><span lang="es">Antes · promociones de mensajes (90 días)</span><span lang="en">Before · message boosts (90 days)</span></h4><dl>
+        <div><dt><span lang="es">Inversión por día</span><span lang="en">Spend per day</span></dt><dd><span lang="es">$11,01</span><span lang="en">$11.01</span></dd></div>
+        <div><dt><span lang="es">Conversaciones por día</span><span lang="en">Conversations per day</span></dt><dd>1.2</dd></div>
+        <div><dt><span lang="es">Costo por conversación</span><span lang="en">Cost per conversation</span></dt><dd><span lang="es">$9,35</span><span lang="en">$9.35</span></dd></div>
+        <div><dt><span lang="es">Qué se pautaba</span><span lang="en">What ran</span></dt><dd style="font-weight:400"><span lang="es">Un post de Instagram promocionado</span><span lang="en">One boosted Instagram post</span></dd></div>
+      </dl></div>
+      <div class="side is-new"><h4><span lang="es">Campaña nueva · objetivo</span><span lang="en">New campaign · target</span></h4><dl>
+        <div><dt><span lang="es">Inversión por día</span><span lang="en">Spend per day</span></dt><dd><span lang="es">$33</span><span lang="en">$33</span></dd></div>
+        <div><dt><span lang="es">Conversaciones por día</span><span lang="en">Conversations per day</span></dt><dd>~8.3</dd></div>
+        <div><dt><span lang="es">Costo por conversación</span><span lang="en">Cost per conversation</span></dt><dd><span lang="es">$4</span><span lang="en">$4</span></dd></div>
+        <div><dt><span lang="es">Qué se pauta</span><span lang="en">What runs</span></dt><dd style="font-weight:400"><span lang="es">6 anuncios diseñados para pauta, 3 públicos</span><span lang="en">6 ads built for paid media, 3 audiences</span></dd></div>
+      </dl></div>
+    </div>
+  </section>
+
+  <section>
+    <h2><span lang="es">Cómo va avanzando</span><span lang="en">How it is progressing</span></h2>
+    <p lang="es">Sin lecturas todavía. Las revisiones programadas son el día 1 (aprobaciones), el día 3 (tamaño de la audiencia similar), el día 7 (primera lectura y redistribución), el día 12 y el día 30.</p><p lang="en">No reads yet. Scheduled reviews are day 1 (approvals), day 3 (lookalike size), day 7 (first read and reallocation), day 12 and day 30.</p>
+  </section>
+  
+  
+  
+
+  <section>
+    <h2><span lang="es">Cómo leer estas cifras</span><span lang="en">How to read these figures</span></h2>
+    <div class="notes">
+      <div><b><span lang="es">Qué es una conversación</span><span lang="en">What a conversation is</span></b><span lang="es">Un padre que escribe desde un anuncio por primera vez, o que vuelve a escribir después de 7 días o más. Es lo que la campaña optimiza y lo que se compara.</span><span lang="en">A parent who messages from an ad for the first time, or writes again after 7 or more days. It is what the campaign optimizes and what gets compared.</span></div>
+      <div><b><span lang="es">Por qué el "antes" son solo 3 promociones</span><span lang="en">Why "before" is only 3 boosts</span></b><span lang="es">De las 21 promociones anteriores, solo 3 buscaban mensajes. Las demás compraban clics o visitas al perfil, que no se pueden convertir en conversaciones ni en inscripciones.</span><span lang="en">Of the 21 previous boosts, only 3 aimed for messages. The rest bought clicks or profile visits, which cannot be turned into conversations or enrollments.</span></div>
+      <div><b><span lang="es">Conversación no es inscripción</span><span lang="en">A conversation is not an enrollment</span></b><span lang="es">Cuántas conversaciones terminan en un niño inscrito lo sabe quien responde los mensajes. Ese dato se agregará a esta pestaña en cada revisión.</span><span lang="en">How many conversations end in an enrolled child is known by whoever answers the messages. That figure will be added to this tab at every review.</span></div>
+      <div><b><span lang="es">Solo residentes</span><span lang="en">Residents only</span></b><span lang="es">La campaña nueva se muestra solo a residentes del área de Las Vegas. Las promociones anteriores no tenían ese filtro.</span><span lang="en">The new campaign is shown only to Las Vegas-area residents. The previous boosts had no such filter.</span></div>
+    </div>
+  </section>
+  <footer><span lang="es">Antes y después · Juventus Academy Las Vegas · se actualiza en cada revisión de la campaña.</span><span lang="en">Before & after · Juventus Academy Las Vegas · updated at every campaign review.</span></footer>
+</div>
+</div>
 <script>
+(function(){function vista(){var h=location.hash==='#resultados'?'resultados':'propuesta';document.getElementById('v-propuesta').hidden=h!=='propuesta';document.getElementById('v-resultados').hidden=h!=='resultados';document.querySelectorAll('.tabs a').forEach(function(a){a.setAttribute('aria-current',a.getAttribute('href')==='#'+h?'page':'false')});window.scrollTo(0,0)}addEventListener('hashchange',vista);vista();})();
 (function(){var r=document.documentElement,a=document.getElementById('btn-es'),b=document.getElementById('btn-en');
 function set(l){if(l==='en')r.setAttribute('data-lang','en');else r.removeAttribute('data-lang');a.setAttribute('aria-pressed',l==='en'?'false':'true');b.setAttribute('aria-pressed',l==='en'?'true':'false');try{localStorage.setItem('jlv-lang',l)}catch(e){}}
 a.addEventListener('click',function(){set('es')});b.addEventListener('click',function(){set('en')});
